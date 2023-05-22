@@ -36,6 +36,8 @@ public class ProductDB {
 		}
 	}
 
+	
+	//Returns all products in DB
 	public List<Product> getAll() {
 		List<Product> products = new ArrayList<>();
 		String sqlQuery = "select name,type,place,warranty from product";
@@ -57,6 +59,7 @@ public class ProductDB {
 		return products;
 	}
 
+	//Returns  products in DB with Specific text 
 	public List<Product> getProductWithSpecificText(String text) {
 		ProductDB d = new ProductDB();
 		List<Product> allProducts = d.getAll();
@@ -74,6 +77,7 @@ public class ProductDB {
 		
 	}
 
+	//returns products based on place
 	public List<Product> getProductWithSpecificPlace(String text) {
 		ProductDB d = new ProductDB();
 		List<Product> allProducts = d.getAll();
@@ -90,7 +94,7 @@ public class ProductDB {
 	}
 
 	
-	
+	//returns prodct based on expired warranty
 	public List<Product> getExpiredProducts() {
 		List<Product> products = new ArrayList<>();
 		String sqlQuery = "select name,type,place,warranty from product where warranty<2023";
