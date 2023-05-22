@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ProductService {
 	
-//	List<Product> products = new ArrayList<>();
+
 	
 	@Autowired
 	ProductDB db;
